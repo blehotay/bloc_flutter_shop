@@ -8,9 +8,9 @@ class ShopCubit extends Cubit<ShopState> {
   final productRepo = serviceLocator<ProductRepository>();
 
   ShopCubit(): super(ShopLoadingState()) {
-_loadProduct();
+loadProduct();
   }
- void _loadProduct() async {
+ void loadProduct() async {
     emit(ShopLoadingState());
 
     try {
